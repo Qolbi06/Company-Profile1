@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hal 4</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <style>
+        .banner {
+            height: 100vh;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/3.webp');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+    
+        .banner-content {
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+    </style>
+    
+    <style>
+        .Btn {
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(#000, #ff6868);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            cursor: pointer;
+            border: none;
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    
+        .arrow path {
+            fill: white;
+            transform-origin: center;
+            transition: transform 0.3s ease-in-out;
+        }
+    
+        .text {
+            font-size: 0.7em;
+            width: 100px;
+            position: absolute;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            bottom: -18px;
+            opacity: 0;
+            transition: opacity 0.7s;
+        }
+    
+        .Btn:hover .text {
+            opacity: 1;
+        }
+    
+        .Btn:hover .arrow {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="https://web-assets.mancity.com/dist/statics/apple-icon-180x180.png" alt="" width="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <!-- Banner -->
+    <div class="container-fluid gx-0">
+        <div class="banner">
+            <div class="banner-content text-white">
+                <h1>Mancester City</h1>
+                <h6>Third Kit 2023/24</h6>
+            </div>
+        </div>
+    </div>
+    <!-- End Banner -->
+
+    <!-- Container -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#000000" fill-opacity="1"
+            d="M0,64L0,64L36.9,64L36.9,192L73.8,192L73.8,224L110.8,224L110.8,224L147.7,224L147.7,128L184.6,128L184.6,288L221.5,288L221.5,256L258.5,256L258.5,288L295.4,288L295.4,256L332.3,256L332.3,288L369.2,288L369.2,32L406.2,32L406.2,320L443.1,320L443.1,320L480,320L480,224L516.9,224L516.9,288L553.8,288L553.8,64L590.8,64L590.8,320L627.7,320L627.7,64L664.6,64L664.6,320L701.5,320L701.5,224L738.5,224L738.5,192L775.4,192L775.4,64L812.3,64L812.3,192L849.2,192L849.2,256L886.2,256L886.2,160L923.1,160L923.1,224L960,224L960,320L996.9,320L996.9,64L1033.8,64L1033.8,224L1070.8,224L1070.8,160L1107.7,160L1107.7,128L1144.6,128L1144.6,288L1181.5,288L1181.5,224L1218.5,224L1218.5,160L1255.4,160L1255.4,64L1292.3,64L1292.3,288L1329.2,288L1329.2,288L1366.2,288L1366.2,128L1403.1,128L1403.1,160L1440,160L1440,0L1403.1,0L1403.1,0L1366.2,0L1366.2,0L1329.2,0L1329.2,0L1292.3,0L1292.3,0L1255.4,0L1255.4,0L1218.5,0L1218.5,0L1181.5,0L1181.5,0L1144.6,0L1144.6,0L1107.7,0L1107.7,0L1070.8,0L1070.8,0L1033.8,0L1033.8,0L996.9,0L996.9,0L960,0L960,0L923.1,0L923.1,0L886.2,0L886.2,0L849.2,0L849.2,0L812.3,0L812.3,0L775.4,0L775.4,0L738.5,0L738.5,0L701.5,0L701.5,0L664.6,0L664.6,0L627.7,0L627.7,0L590.8,0L590.8,0L553.8,0L553.8,0L516.9,0L516.9,0L480,0L480,0L443.1,0L443.1,0L406.2,0L406.2,0L369.2,0L369.2,0L332.3,0L332.3,0L295.4,0L295.4,0L258.5,0L258.5,0L221.5,0L221.5,0L184.6,0L184.6,0L147.7,0L147.7,0L110.8,0L110.8,0L73.8,0L73.8,0L36.9,0L36.9,0L0,0L0,0Z">
+        </path>
+    </svg>
+    <div class="container mt-5">
+        <h1 class="text-center"></h1>
+        <h1 class="text-center d-sm-none d-md-block"></h1>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4 mb-2 d-flex justify-content-center mt-5" data-aos="fade-up-right"
+                    data-aos-duration="2000">
+                    <div class="card" style="width: 18rem;">
+                        <img src="/img/4.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">£ 75,00</h5>
+                            <p class="card-text">Manchester City Third Jersey 2023/24</p>
+                            <a href="#" class="btn btn-outline-dark">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 mb-2 d-flex justify-content-center mt-5" data-aos="fade-up-right"
+                    data-aos-duration="2000">
+                    <div class="card" style="width: 18rem;">
+                        <img src="/img/5.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">£ 110,00</h5>
+                            <p class="card-text">Manchester City Authentic Third Jersey 2023/24 In Gift Box</p>
+                            <a href="#" class="btn btn-outline-dark">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 mb-2 d-flex justify-content-center mt-5" data-aos="fade-up-right"
+                    data-aos-duration="2000">
+                    <div class="card" style="width: 18rem;">
+                        <img src="/img/6.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">£ 75,00</h5>
+                            <p class="card-text">Women's Manchester City Third Jersey 2023/24</p>
+                            <a href="#" class="btn btn-outline-dark">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 mb-2 d-flex justify-content-center mt-3" data-aos="fade-up-right"
+                    data-aos-duration="2000">
+                    <div class="card" style="width: 18rem;">
+                        <img src="/img/7.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">£ 80,00</h5>
+                            <p class="card-text">Manchester City Third Jersey 2023/24 Long Sleeve</p>
+                            <a href="#" class="btn btn-outline-dark">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 mb-2 d-flex justify-content-center mt-3" data-aos="fade-up-right"
+                    data-aos-duration="2000">
+                    <div class="card" style="width: 18rem;">
+                        <img src="/img/8.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">£ 65,00</h5>
+                            <p class="card-text">Kids' Manchester City Third Jersey 2023/24 Long Sleeve</p>
+                            <a href="#" class="btn btn-outline-dark">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 mb-2 d-flex justify-content-center mt-3" data-aos="fade-up-right"
+                    data-aos-duration="2000">
+                    <div class="card" style="width: 18rem;">
+                        <img src="/img/9.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">£ 35,00</h5>
+                            <p class="card-text">Manchester City Short 2023/24</p>
+                            <a href="#" class="btn btn-outline-dark">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 mb-2 d-flex justify-content-center mt-3" data-aos="fade-up-right"
+                    data-aos-duration="2000">
+                    <div class="card" style="width: 18rem;">
+                        <img src="/img/10.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">£ 25,00</h5>
+                            <p class="card-text">Kids' Manchester City Football Short 2023/24</p>
+                            <a href="#" class="btn btn-outline-dark">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 mb-2 d-flex justify-content-center mt-3" data-aos="fade-up-right"
+                    data-aos-duration="2000">
+                    <div class="card" style="width: 18rem;">
+                        <img src="/img/11.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">£ 17,00</h5>
+                            <p class="card-text">Manchester City Thirdc Socks</p>
+                            <a href="#" class="btn btn-outline-dark">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 mb-2 d-flex justify-content-center mt-3" data-aos="fade-up-right"
+                    data-aos-duration="2000">
+                    <div class="card" style="width: 18rem;">
+                        <img src="/img/12.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">£ 50,00</h5>
+                            <p class="card-text">Manchester City Third Mini Kit 2023/24</p>
+                            <a href="#" class="btn btn-outline-dark">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 mb-2 d-flex justify-content-center mt-3" data-aos="fade-up-right"
+                    data-aos-duration="2000">
+                    <div class="card" style="width: 18rem;">
+                        <img src="/img/13.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">£ 40,00</h5>
+                            <p class="card-text">Manchester City Third Baby Kit 2023/24</p>
+                            <a href="#" class="btn btn-outline-dark">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 mb-2 d-flex justify-content-center mt-3" data-aos="fade-up-right"
+                    data-aos-duration="2000">
+                    <div class="card" style="width: 18rem;">
+                        <img src="/img/14.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">£ 75,00</h5>
+                            <p class="card-text">Manchester City Third Jersey 2023/24 With Custom Printing</p>
+                            <a href="#" class="btn btn-outline-dark">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 mb-2 d-flex justify-content-center mt-3" data-aos="fade-up-right"
+                    data-aos-duration="2000">
+                    <div class="card" style="width: 18rem;">
+                        <img src="/img/15.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">£ 110,00</h5>
+                            <p class="card-text">Manchester City Authentic Third Jersey 2023/24 With Custom Printing In
+                                Gift Box</p>
+                            <a href="#" class="btn btn-outline-dark">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 mb-2 d-flex justify-content-center mt-3" data-aos="fade-up-right"
+                    data-aos-duration="2000">
+                    <div class="card" style="width: 18rem;">
+                        <img src="/img/16.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">£ 60,00</h5>
+                            <p class="card-text">Kids' Manchester City Third Jersey 2023/24 With Custom Printing</p>
+                            <a href="#" class="btn btn-outline-dark">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 mb-2 d-flex justify-content-center mt-3" data-aos="fade-up-right"
+                    data-aos-duration="2000">
+                    <div class="card" style="width: 18rem;">
+                        <img src="/img/17.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">£ 75,00</h5>
+                            <p class="card-text">Women's Manchester City Third Jersey 2023/24 With Custom Printing</p>
+                            <a href="#" class="btn btn-outline-dark">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 mb-2 d-flex justify-content-center mt-3" data-aos="fade-up-right"
+                    data-aos-duration="2000">
+                    <div class="card" style="width: 18rem;">
+                        <img src="/img/18.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">£ 80,00</h5>
+                            <p class="card-text">Manchester City Third Jersey 2023/24 Long Sleeve With Custom Printing
+                            </p>
+                            <a href="#" class="btn btn-outline-dark">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 mb-2 d-flex justify-content-center mt-3" data-aos="fade-up-right"
+                    data-aos-duration="2000">
+                    <div class="card" style="width: 18rem;">
+                        <img src="/img/19.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">£ 50,00</h5>
+                            <p class="card-text">Manchester City Third Mini Kit 2023/24 With Custom Printing</p>
+                            <a href="#" class="btn btn-outline-dark">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 mb-2 d-flex justify-content-center mt-3" data-aos="fade-up-right"
+                    data-aos-duration="2000">
+                    <div class="card" style="width: 18rem;">
+                        <img src="/img/20.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">£ 25,00</h5>
+                            <p class="card-text">Kids' Manchester City Football Short 2023/24 With Custom Number</p>
+                            <a href="#" class="btn btn-outline-dark">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 mb-2 d-flex justify-content-center mt-3" data-aos="fade-up-right"
+                    data-aos-duration="2000">
+                    <div class="card" style="width: 18rem;">
+                        <img src="/img/21.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">£ 35,00</h5>
+                            <p class="card-text">Manchester City Football Short 2023/24 With Custom Number</p>
+                            <a href="#" class="btn btn-outline-dark">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 mb-2 d-flex justify-content-center mt-3" data-aos="fade-up-right"
+                    data-aos-duration="2000">
+                    <div class="card" style="width: 18rem;">
+                        <img src="/img/22.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">£ 65,00</h5>
+                            <p class="card-text">Kids' Manchester City Third Jersey 2023/24 Long Sleeve With Custom
+                                Printing</p>
+                            <a href="#" class="btn btn-outline-dark">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Container -->
+
+    <!-- Footers -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#000000" fill-opacity="1"
+            d="M0,64L0,96L51.4,96L51.4,32L102.9,32L102.9,128L154.3,128L154.3,256L205.7,256L205.7,256L257.1,256L257.1,96L308.6,96L308.6,32L360,32L360,192L411.4,192L411.4,224L462.9,224L462.9,256L514.3,256L514.3,224L565.7,224L565.7,96L617.1,96L617.1,192L668.6,192L668.6,128L720,128L720,288L771.4,288L771.4,96L822.9,96L822.9,32L874.3,32L874.3,288L925.7,288L925.7,96L977.1,96L977.1,192L1028.6,192L1028.6,128L1080,128L1080,0L1131.4,0L1131.4,64L1182.9,64L1182.9,160L1234.3,160L1234.3,128L1285.7,128L1285.7,192L1337.1,192L1337.1,96L1388.6,96L1388.6,32L1440,32L1440,320L1388.6,320L1388.6,320L1337.1,320L1337.1,320L1285.7,320L1285.7,320L1234.3,320L1234.3,320L1182.9,320L1182.9,320L1131.4,320L1131.4,320L1080,320L1080,320L1028.6,320L1028.6,320L977.1,320L977.1,320L925.7,320L925.7,320L874.3,320L874.3,320L822.9,320L822.9,320L771.4,320L771.4,320L720,320L720,320L668.6,320L668.6,320L617.1,320L617.1,320L565.7,320L565.7,320L514.3,320L514.3,320L462.9,320L462.9,320L411.4,320L411.4,320L360,320L360,320L308.6,320L308.6,320L257.1,320L257.1,320L205.7,320L205.7,320L154.3,320L154.3,320L102.9,320L102.9,320L51.4,320L51.4,320L0,320L0,320Z">
+        </path>
+    </svg>
+    <div class="container4">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top">
+            <p class="col-md-4 mb-0 text-light">&copy; 2024 Company, Inc</p>
+
+            <a href="/"
+                class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                <svg class="bi me-2" width="40" height="32">
+                    <use xlink:href="#bootstrap" /></svg>
+            </a>
+
+            <ul class="nav col-md-4 justify-content-end">
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-light">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-light">Features</a>
+                </li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-light">Pricing</a>
+                </li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-light">FAQs</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-light">About</a>
+                </li>
+            </ul>
+        </footer>
+    </div>
+    <!-- End Footers -->
+
+    <!-- Button -->
+    <button class="Btn" onclick="scrollToTop()">
+        <svg height="1.2em" class="arrow" viewBox="0 0 512 512">
+            <path
+                d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z">
+            </path>
+        </svg>
+        <p class="text">Back to Top</p>
+    </button>
+
+    <script>
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+    </script>
+    <!-- End Button -->
+
+
+    <script src="/js/bootstrap.bundle.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

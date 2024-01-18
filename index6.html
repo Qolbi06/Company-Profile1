@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hal 6</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <style>
+        .banner {
+            height: 100vh;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/6.webp');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+    
+        .banner-content {
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+    </style>
+    
+    <style>
+        .Btn {
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(#a2d9ff, #39fad7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            cursor: pointer;
+            border: none;
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    
+        .arrow path {
+            fill: white;
+            transform-origin: center;
+            transition: transform 0.3s ease-in-out;
+        }
+    
+        .text {
+            font-size: 0.7em;
+            width: 100px;
+            position: absolute;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            bottom: -18px;
+            opacity: 0;
+            transition: opacity 0.7s;
+        }
+    
+        .Btn:hover .text {
+            opacity: 1;
+        }
+    
+        .Btn:hover .arrow {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+
+
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="https://web-assets.mancity.com/dist/statics/apple-icon-180x180.png" alt="" width="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <!-- Banner -->
+    <div class="container-fluid gx-0">
+        <div class="banner">
+            <div class="banner-content text-white">
+                <h1>Mancester City</h1>
+                <h6>The Squad 2023/24</h6>
+            </div>
+        </div>
+    </div>
+    <!-- End Banner -->
+
+    <!-- Container -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#a2d9ff" fill-opacity="1"
+            d="M0,64L0,64L36.9,64L36.9,192L73.8,192L73.8,224L110.8,224L110.8,224L147.7,224L147.7,128L184.6,128L184.6,288L221.5,288L221.5,256L258.5,256L258.5,288L295.4,288L295.4,256L332.3,256L332.3,288L369.2,288L369.2,32L406.2,32L406.2,320L443.1,320L443.1,320L480,320L480,224L516.9,224L516.9,288L553.8,288L553.8,64L590.8,64L590.8,320L627.7,320L627.7,64L664.6,64L664.6,320L701.5,320L701.5,224L738.5,224L738.5,192L775.4,192L775.4,64L812.3,64L812.3,192L849.2,192L849.2,256L886.2,256L886.2,160L923.1,160L923.1,224L960,224L960,320L996.9,320L996.9,64L1033.8,64L1033.8,224L1070.8,224L1070.8,160L1107.7,160L1107.7,128L1144.6,128L1144.6,288L1181.5,288L1181.5,224L1218.5,224L1218.5,160L1255.4,160L1255.4,64L1292.3,64L1292.3,288L1329.2,288L1329.2,288L1366.2,288L1366.2,128L1403.1,128L1403.1,160L1440,160L1440,0L1403.1,0L1403.1,0L1366.2,0L1366.2,0L1329.2,0L1329.2,0L1292.3,0L1292.3,0L1255.4,0L1255.4,0L1218.5,0L1218.5,0L1181.5,0L1181.5,0L1144.6,0L1144.6,0L1107.7,0L1107.7,0L1070.8,0L1070.8,0L1033.8,0L1033.8,0L996.9,0L996.9,0L960,0L960,0L923.1,0L923.1,0L886.2,0L886.2,0L849.2,0L849.2,0L812.3,0L812.3,0L775.4,0L775.4,0L738.5,0L738.5,0L701.5,0L701.5,0L664.6,0L664.6,0L627.7,0L627.7,0L590.8,0L590.8,0L553.8,0L553.8,0L516.9,0L516.9,0L480,0L480,0L443.1,0L443.1,0L406.2,0L406.2,0L369.2,0L369.2,0L332.3,0L332.3,0L295.4,0L295.4,0L258.5,0L258.5,0L221.5,0L221.5,0L184.6,0L184.6,0L147.7,0L147.7,0L110.8,0L110.8,0L73.8,0L73.8,0L36.9,0L36.9,0L0,0L0,0Z">
+        </path>
+    </svg>
+    <div class="container mt-5">
+        <h1 class="text-center"></h1>
+        <h1 class="text-center d-sm-none d-md-block"></h1>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 mb-2 mt-5" data-aos="fade-right" data-aos-duration="2000">
+                    <div class="card">
+                        <div class="card">
+                            <div class="card-header text-center">Man City</div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="images1/7.webp" alt="" class="img-thumbnail">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6 class="text-center">Goalkeaper</h6>
+                                        <p class="text-center">
+                                            <span class="badge bg-success">Ederson Moraes</span>
+                                        </p>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item text-center">
+                                                <img src="https://mediacdn.mancity.com/meta/media/1cnlvryp/br.svg"
+                                                    alt="" width="30">
+                                            </li>
+                                            <li class="list-group-item text-center">30</li>
+                                            <li class="list-group-item text-center">1,88M</li>
+                                            <li class="list-group-item text-center">Left</li>
+                                            <li class="list-group-item text-center">2017-07-01</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 mb-2 mt-5" data-aos="fade-left" data-aos-duration="2000">
+                    <div class="card">
+                        <div class="card">
+                            <div class="card-header text-center">Man City</div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="images1/8.webp" alt="" class="img-thumbnail">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6 class="text-center">Goalkeeper</h6>
+                                        <p class="text-center">
+                                            <span class="badge bg-success">Ortega Moreno</span>
+                                        </p>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item text-center"><img
+                                                    src="https://mediacdn.mancity.com/meta/media/q0omqxek/de.svg" alt=""
+                                                    width="30">
+                                            </li>
+                                            <li class="list-group-item text-center">31</li>
+                                            <li class="list-group-item text-center">1,85M</li>
+                                            <li class="list-group-item text-center">Right</li>
+                                            <li class="list-group-item text-center">2022-07-01</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 mb-2" data-aos="fade-right" data-aos-duration="2000">
+                    <div class="card">
+                        <div class="card">
+                            <div class="card-header text-center">Man City</div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="images1/9.webp" alt="" class="img-thumbnail">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6 class="text-center">Goalkeeper</h6>
+                                        <p class="text-center">
+                                            <span class="badge bg-success">Scott Carson</span>
+                                        </p>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item text-center">
+                                                <img src="https://mediacdn.mancity.com/meta/media/kbujcobi/gb-eng.svg"
+                                                    alt="" width="30" x>
+                                            </li>
+                                            <li class="list-group-item text-center">38</li>
+                                            <li class="list-group-item text-center">1,9M</li>
+                                            <li class="list-group-item text-center">Right</li>
+                                            <li class="list-group-item text-center">2019-08-08</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 mb-2" data-aos="fade-left" data-aos-duration="2000">
+                    <div class="card">
+                        <div class="card">
+                            <div class="card-header text-center">Man City</div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="images1/10.webp" alt="" class="img-thumbnail">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6 class="text-center">Defense</h6>
+                                        <p class="text-center">
+                                            <span class="badge bg-secondary">Manuel Akanji</span>
+                                        </p>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item text-center">
+                                                <img src="https://mediacdn.mancity.com/meta/media/ygdf1u0z/ch.svg"
+                                                    alt="" width="30">
+                                            </li>
+                                            <li class="list-group-item text-center">28</li>
+                                            <li class="list-group-item text-center">1,86M</li>
+                                            <li class="list-group-item text-center">Right</li>
+                                            <li class="list-group-item text-center">2022-09-01</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 mb-2" data-aos="fade-right" data-aos-duration="2000">
+                    <div class="card">
+                        <div class="card">
+                            <div class="card-header text-center">Man City</div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="images1/11.webp" alt="" class="img-thumbnail">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6 class="text-center">Defense</h6>
+                                        <p class="text-center">
+                                            <span class="badge bg-secondary">Nathan Ake</span>
+                                        </p>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item text-center">
+                                                <img src="https://mediacdn.mancity.com/meta/media/xv1hoqyi/nl.svg"
+                                                    alt="" width="30">
+                                            </li>
+                                            <li class="list-group-item text-center">28</li>
+                                            <li class="list-group-item text-center">1,8M</li>
+                                            <li class="list-group-item text-center">Left</li>
+                                            <li class="list-group-item text-center">2020-08-05</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 mb-2" data-aos="fade-left" data-aos-duration="2000">
+                    <div class="card">
+                        <div class="card">
+                            <div class="card-header text-center">Man City</div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="images1/12.webp" alt="" class="img-thumbnail">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6 class="text-center">Defense</h6>
+                                        <p class="text-center">
+                                            <span class="badge bg-secondary">Ruben Dias</span>
+                                        </p>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item text-center">
+                                                <img src="https://mediacdn.mancity.com/meta/media/wyuhecht/pt.svg"
+                                                    alt="" width="30">
+                                            </li>
+                                            <li class="list-group-item text-center">26</li>
+                                            <li class="list-group-item text-center">1,86M</li>
+                                            <li class="list-group-item text-center">Right</li>
+                                            <li class="list-group-item text-center">2020-09-29</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 mb-2" data-aos="fade-right" data-aos-duration="2000">
+                    <div class="card">
+                        <div class="card">
+                            <div class="card-header text-center">Man City</div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="images1/13.webp" alt="" class="img-thumbnail">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6 class="text-center">Defense</h6>
+                                        <p class="text-center">
+                                            <span class="badge bg-secondary">Josko Gvardiol</span>
+                                        </p>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item text-center">
+                                                <img src="https://mediacdn.mancity.com/meta/media/osfhndwo/hr.svg"
+                                                    alt="" width="30">
+                                            </li>
+                                            <li class="list-group-item text-center">21</li>
+                                            <li class="list-group-item text-center">1,85M</li>
+                                            <li class="list-group-item text-center">Right</li>
+                                            <li class="list-group-item text-center">2023-08-05</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 mb-2" data-aos="fade-left" data-aos-duration="2000">
+                    <div class="card">
+                        <div class="card">
+                            <div class="card-header text-center">Man City</div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="images1/14.webp" alt="" class="img-thumbnail">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6 class="text-center">Defense</h6>
+                                        <p class="text-center">
+                                            <span class="badge bg-secondary">Rico Lewis</span>
+                                        </p>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item text-center">
+                                                <img src="https://mediacdn.mancity.com/meta/media/kbujcobi/gb-eng.svg"
+                                                    alt="" width="30">
+                                            </li>
+                                            <li class="list-group-item text-center">19</li>
+                                            <li class="list-group-item text-center">1,7M</li>
+                                            <li class="list-group-item text-center">Right</li>
+                                            <li class="list-group-item text-center">2012-07-01</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 mb-2" data-aos="fade-right" data-aos-duration="2000">
+                    <div class="card">
+                        <div class="card">
+                            <div class="card-header text-center">Man City</div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="images1/15.webp" alt="" class="img-thumbnail">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6 class="text-center">Defense</h6>
+                                        <p class="text-center">
+                                            <span class="badge bg-secondary">John Stones</span>
+                                        </p>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item text-center">
+                                                <img src="https://mediacdn.mancity.com/meta/media/kbujcobi/gb-eng.svg"
+                                                    alt="" width="30">
+                                            </li>
+                                            <li class="list-group-item text-center">29</li>
+                                            <li class="list-group-item text-center">1,88M</li>
+                                            <li class="list-group-item text-center">Right</li>
+                                            <li class="list-group-item text-center">2016-08-09</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 mb-2" data-aos="fade-left" data-aos-duration="2000">
+                    <div class="card">
+                        <div class="card">
+                            <div class="card-header text-center">Man City</div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="images1/16.webp" alt="" class="img-thumbnail">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6 class="text-center">Defense</h6>
+                                        <p class="text-center">
+                                            <span class="badge bg-secondary">Kyle Walker</span>
+                                        </p>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item text-center">
+                                                <img src="https://mediacdn.mancity.com/meta/media/kbujcobi/gb-eng.svg"
+                                                    alt="" width="30">
+                                            </li>
+                                            <li class="list-group-item text-center">33</li>
+                                            <li class="list-group-item text-center">1,78M</li>
+                                            <li class="list-group-item text-center">Right</li>
+                                            <li class="list-group-item text-center">2017-07-14</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 mb-2" data-aos="fade-right" data-aos-duration="2000">
+                    <div class="card">
+                        <div class="card">
+                            <div class="card-header text-center">Man City</div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="images1/17.webp" alt="" class="img-thumbnail">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6 class="text-center">Midfielder</h6>
+                                        <p class="text-center">
+                                            <span class="badge bg-warning">Oscar Bobb</span>
+                                        </p>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item text-center">
+                                                <img src="https://mediacdn.mancity.com/meta/media/tollp40b/no.svg"
+                                                    alt="" width="30">
+                                            </li>
+                                            <li class="list-group-item text-center">20</li>
+                                            <li class="list-group-item text-center">1,74M</li>
+                                            <li class="list-group-item text-center">Left</li>
+                                            <li class="list-group-item text-center">2019-07-12</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 mb-2" data-aos="fade-left" data-aos-duration="2000">
+                    <div class="card">
+                        <div class="card">
+                            <div class="card-header text-center">Man City</div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="images1/18.webp" alt="" class="img-thumbnail">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6 class="text-center">Midfielder</h6>
+                                        <p class="text-center">
+                                            <span class="badge bg-warning">Mateo Kovacic</span>
+                                        </p>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item text-center">
+                                                <img src="https://mediacdn.mancity.com/meta/media/osfhndwo/hr.svg"
+                                                    alt="" width="30">
+                                            </li>
+                                            <li class="list-group-item text-center">29</li>
+                                            <li class="list-group-item text-center">1,77M</li>
+                                            <li class="list-group-item text-center">Right</li>
+                                            <li class="list-group-item text-center">2023-06-26</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 mb-2" data-aos="fade-right" data-aos-duration="2000">
+                    <div class="card">
+                        <div class="card">
+                            <div class="card-header text-center">Man City</div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="images1/19.webp" alt="" class="img-thumbnail">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6 class="text-center">Midfielder</h6>
+                                        <p class="text-center">
+                                            <span class="badge bg-warning">Matheus Nunes</span>
+                                        </p>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item text-center">
+                                                <img src="https://mediacdn.mancity.com/meta/media/wyuhecht/pt.svg"
+                                                    alt="" width="30">
+                                            </li>
+                                            <li class="list-group-item text-center">25</li>
+                                            <li class="list-group-item text-center">1,84M</li>
+                                            <li class="list-group-item text-center">Right</li>
+                                            <li class="list-group-item text-center">2023-09-01</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 mb-2" data-aos="fade-left" data-aos-duration="2000">
+                    <div class="card">
+                        <div class="card">
+                            <div class="card-header text-center">Man City</div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="images1/20.webp" alt="" class="img-thumbnail">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6 class="text-center">Midfielder</h6>
+                                        <p class="text-center">
+                                            <span class="badge bg-warning">Kalvin Phillips</span>
+                                        </p>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item text-center">
+                                                <img src="https://mediacdn.mancity.com/meta/media/kbujcobi/gb-eng.svg"
+                                                    alt="" width="30">
+                                            </li>
+                                            <li class="list-group-item text-center">28</li>
+                                            <li class="list-group-item text-center">1,78M</li>
+                                            <li class="list-group-item text-center">Right</li>
+                                            <li class="list-group-item text-center">2022-07-04</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 mb-2" data-aos="fade-right" data-aos-duration="2000">
+                    <div class="card">
+                        <div class="card">
+                            <div class="card-header text-center">Man City</div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="images1/29.webp" alt="" class="img-thumbnail">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6 class="text-center">Midfielder</h6>
+                                        <p class="text-center">
+                                            <span class="badge bg-warning">Jack Grealish</span>
+                                        </p>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item text-center">
+                                                <img src="https://mediacdn.mancity.com/meta/media/kbujcobi/gb-eng.svg"
+                                                    alt="" width="30">
+                                            </li>
+                                            <li class="list-group-item text-center">28</li>
+                                            <li class="list-group-item text-center">1,75M</li>
+                                            <li class="list-group-item text-center">Right</li>
+                                            <li class="list-group-item text-center">2021-08-05</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 mb-2" data-aos="fade-left" data-aos-duration="2000">
+                    <div class="card">
+                        <div class="card">
+                            <div class="card-header text-center">Man City</div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="images1/21.webp" alt="" class="img-thumbnail">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6 class="text-center">Midfielder</h6>
+                                        <p class="text-center">
+                                            <span class="badge bg-warning">Rodrigo</span>
+                                        </p>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item text-center">
+                                                <img src="https://mediacdn.mancity.com/meta/media/34sj50z3/es.svg"
+                                                    alt="" width="30">
+                                            </li>
+                                            <li class="list-group-item text-center">27</li>
+                                            <li class="list-group-item text-center">1,91M</li>
+                                            <li class="list-group-item text-center">Right</li>
+                                            <li class="list-group-item text-center">2019-07-04</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 mb-2" data-aos="fade-right" data-aos-duration="2000">
+                    <div class="card">
+                        <div class="card">
+                            <div class="card-header text-center">Man City</div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="images1/22.webp" alt="" class="img-thumbnail">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6 class="text-center">Midfielder</h6>
+                                        <p class="text-center">
+                                            <span class="badge bg-warning">Bernardo Silva</span>
+                                        </p>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item text-center">
+                                                <img src="https://mediacdn.mancity.com/meta/media/wyuhecht/pt.svg"
+                                                    alt="" width="30">
+                                            </li>
+                                            <li class="list-group-item text-center">29</li>
+                                            <li class="list-group-item text-center">1,73M</li>
+                                            <li class="list-group-item text-center">Left</li>
+                                            <li class="list-group-item text-center">2017-07-01</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 mb-2" data-aos="fade-left" data-aos-duration="2000">
+                    <div class="card">
+                        <div class="card">
+                            <div class="card-header text-center">Man City</div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="images1/23.webp" alt="" class="img-thumbnail">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6 class="text-center">Midfielder</h6>
+                                        <p class="text-center">
+                                            <span class="badge bg-warning">Kevin De Bruyne</span>
+                                        </p>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item text-center">
+                                                <img src="https://mediacdn.mancity.com/meta/media/2naltqhs/be.svg"
+                                                    alt="" width="30">
+                                            </li>
+                                            <li class="list-group-item text-center">32</li>
+                                            <li class="list-group-item text-center">1,81M</li>
+                                            <li class="list-group-item text-center">Left</li>
+                                            <li class="list-group-item text-center">2015-08-30</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 mb-2" data-aos="fade-right" data-aos-duration="2000">
+                    <div class="card">
+                        <div class="card">
+                            <div class="card-header text-center">Man City</div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="images1/24.webp" alt="" class="img-thumbnail">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6 class="text-center">Midfielder</h6>
+                                        <p class="text-center">
+                                            <span class="badge bg-warning">Jeremy Doku</span>
+                                        </p>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item text-center">
+                                                <img src="https://mediacdn.mancity.com/meta/media/2naltqhs/be.svg"
+                                                    alt="" width="30">
+                                            </li>
+                                            <li class="list-group-item text-center">21</li>
+                                            <li class="list-group-item text-center">1,73M</li>
+                                            <li class="list-group-item text-center">Right</li>
+                                            <li class="list-group-item text-center">2023-08-24</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 mb-2" data-aos="fade-left" data-aos-duration="2000">
+                    <div class="card">
+                        <div class="card">
+                            <div class="card-header text-center">Man City</div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="images1/25.webp" alt="" class="img-thumbnail">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6 class="text-center">Midfielder</h6>
+                                        <p class="text-center">
+                                            <span class="badge bg-warning">Phil Foden</span>
+                                        </p>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item text-center">
+                                                <img src="https://mediacdn.mancity.com/meta/media/kbujcobi/gb-eng.svg"
+                                                    alt="" width="30">
+                                            </li>
+                                            <li class="list-group-item text-center">23</li>
+                                            <li class="list-group-item text-center">1,71M</li>
+                                            <li class="list-group-item text-center">Left</li>
+                                            <li class="list-group-item text-center">2016-07-01</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 mb-2" data-aos="fade-right" data-aos-duration="2000">
+                    <div class="card">
+                        <div class="card">
+                            <div class="card-header text-center">Man City</div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="images1/26.webp" alt="" class="img-thumbnail">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6 class="text-center">Attacker</h6>
+                                        <p class="text-center">
+                                            <span class="badge bg-danger">Julian Alvarez</span>
+                                        </p>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item text-center">
+                                                <img src="https://mediacdn.mancity.com/meta/media/2kuefji1/ar.svg"
+                                                    alt="" width="30">
+                                            </li>
+                                            <li class="list-group-item text-center">23</li>
+                                            <li class="list-group-item text-center">1,7M</li>
+                                            <li class="list-group-item text-center">Right</li>
+                                            <li class="list-group-item text-center">2022-01-31</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 mb-2" data-aos="fade-left" data-aos-duration="2000">
+                    <div class="card">
+                        <div class="card">
+                            <div class="card-header text-center">Man City</div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="images1/27.webp" alt="" class="img-thumbnail">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6 class="text-center">Attacker</h6>
+                                        <p class="text-center">
+                                            <span class="badge bg-danger">Erling Haaland</span>
+                                        </p>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item text-center">
+                                                <img src="https://mediacdn.mancity.com/meta/media/tollp40b/no.svg"
+                                                    alt="" width="30">
+                                            </li>
+                                            <li class="list-group-item text-center">23</li>
+                                            <li class="list-group-item text-center">1,94M</li>
+                                            <li class="list-group-item text-center">Left</li>
+                                            <li class="list-group-item text-center">2022-07-01</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 mb-2" data-aos="zoom-in-up" data-aos-duration="2000">
+                    <div class="card">
+                        <div class="card">
+                            <div class="card-header text-center">Man City</div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="images1/28.webp" alt="" class="img-thumbnail">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6 class="text-center">Manager</h6>
+                                        <p class="text-center">
+                                            <span class="badge bg-info">Pep Guardiola</span>
+                                        </p>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item text-center">
+                                                <img src="https://mediacdn.mancity.com/meta/media/34sj50z3/es.svg"
+                                                    alt="" width="30">
+                                            </li>
+                                            <li class="list-group-item text-center">52</li>
+                                            <li class="list-group-item text-center">1,8M</li>
+                                            <li class="list-group-item text-center">1971-01-18</li>
+                                            <li class="list-group-item text-center">2016-07-01</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Container -->
+
+    <!-- Footers -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#a2d9ff" fill-opacity="1"
+            d="M0,128L0,192L36.9,192L36.9,192L73.8,192L73.8,128L110.8,128L110.8,288L147.7,288L147.7,288L184.6,288L184.6,160L221.5,160L221.5,224L258.5,224L258.5,128L295.4,128L295.4,0L332.3,0L332.3,224L369.2,224L369.2,96L406.2,96L406.2,320L443.1,320L443.1,96L480,96L480,256L516.9,256L516.9,0L553.8,0L553.8,288L590.8,288L590.8,128L627.7,128L627.7,256L664.6,256L664.6,288L701.5,288L701.5,0L738.5,0L738.5,128L775.4,128L775.4,224L812.3,224L812.3,96L849.2,96L849.2,64L886.2,64L886.2,32L923.1,32L923.1,32L960,32L960,192L996.9,192L996.9,64L1033.8,64L1033.8,224L1070.8,224L1070.8,96L1107.7,96L1107.7,320L1144.6,320L1144.6,192L1181.5,192L1181.5,192L1218.5,192L1218.5,32L1255.4,32L1255.4,64L1292.3,64L1292.3,256L1329.2,256L1329.2,32L1366.2,32L1366.2,128L1403.1,128L1403.1,0L1440,0L1440,320L1403.1,320L1403.1,320L1366.2,320L1366.2,320L1329.2,320L1329.2,320L1292.3,320L1292.3,320L1255.4,320L1255.4,320L1218.5,320L1218.5,320L1181.5,320L1181.5,320L1144.6,320L1144.6,320L1107.7,320L1107.7,320L1070.8,320L1070.8,320L1033.8,320L1033.8,320L996.9,320L996.9,320L960,320L960,320L923.1,320L923.1,320L886.2,320L886.2,320L849.2,320L849.2,320L812.3,320L812.3,320L775.4,320L775.4,320L738.5,320L738.5,320L701.5,320L701.5,320L664.6,320L664.6,320L627.7,320L627.7,320L590.8,320L590.8,320L553.8,320L553.8,320L516.9,320L516.9,320L480,320L480,320L443.1,320L443.1,320L406.2,320L406.2,320L369.2,320L369.2,320L332.3,320L332.3,320L295.4,320L295.4,320L258.5,320L258.5,320L221.5,320L221.5,320L184.6,320L184.6,320L147.7,320L147.7,320L110.8,320L110.8,320L73.8,320L73.8,320L36.9,320L36.9,320L0,320L0,320Z">
+        </path>
+    </svg>
+    <div class="container6">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top">
+            <p class="col-md-4 mb-0 text-body-secondary">&copy; 2024 Company, Inc</p>
+
+            <a href="/"
+                class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                <svg class="bi me-2" width="40" height="32">
+                    <use xlink:href="#bootstrap" /></svg>
+            </a>
+
+            <ul class="nav col-md-4 justify-content-end">
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+            </ul>
+        </footer>
+    </div>
+    <!-- End Footers -->
+
+    <!-- Button -->
+    <button class="Btn" onclick="scrollToTop()">
+        <svg height="1.2em" class="arrow" viewBox="0 0 512 512">
+            <path
+                d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z">
+            </path>
+        </svg>
+        <p class="text">Back to Top</p>
+    </button>
+
+    <script>
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+    </script>
+    <!-- End Button -->
+
+
+    <script src="/js/bootstrap.bundle.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
